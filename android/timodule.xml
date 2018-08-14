@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:module xmlns:ti="http://ti.appcelerator.org" xmlns:android="http://schemas.android.com/apk/res/android">
+	<!--
+		Similar to tiapp.xml, but contains module/platform specific
+		configuration in <iphone> and <android> sections
+	-->
+	<iphone>
+	</iphone>
+	<android xmlns:android="http://schemas.android.com/apk/res/android">
+		<manifest package="ti.jobservice" android:versionCode="1" android:versionName="1.0" android:installLocation="internalOnly">
+			<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26" />
+
+			<!-- permission required for pre O support -->
+			<uses-permission android:name="android.permission.WAKE_LOCK" />
+			<!-- declare the default job service -->
+			<application>
+				<service
+					android:name="ti.jobservice.DefaultJSJobIntentService"
+					android:exported="false"
+					android:permission="android.permission.BIND_JOB_SERVICE" />
+			</application>
+
+	</manifest>
+	</android>
+</ti:module>
