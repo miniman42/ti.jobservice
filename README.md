@@ -4,6 +4,16 @@ Use the native JobIntentService Titanium.
 ## Requirements
 - [x] Titanium SDK 7.3.0+
 
+
+## Example Code to Schedule a Job From within a Module
+
+```js
+TiApplication tiapp=TiApplication.getInstance();
+Intent intent = new Intent(tiapp, DefaultJSJobIntentService.class);
+intent.putExtra("data", jsonData);
+DefaultJSJobIntentService.enqueueWork(tiapp,intent);
+```
+
 ## Example defaultJSJobIntentService.js (must be included in app/assets/android)
 
 ```js
@@ -32,15 +42,6 @@ Use the native JobIntentService Titanium.
     require('mymodule').dowork(done);
 
 })(require('ti.jobservice').getCurrentJobIntentService());
-```
-
-## Example Code to Schedule a Job
-
-```js
-TiApplication tiapp=TiApplication.getInstance();
-Intent intent = new Intent(tiapp, DefaultJSJobIntentService.class);
-intent.putExtra("data", jsonData);
-DefaultJSJobIntentService.enqueueWork(tiapp,intent);
 ```
 
 
