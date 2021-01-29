@@ -15,7 +15,7 @@ import org.appcelerator.kroll.common.Log;
 import android.content.Intent;
 import android.content.Context;
 
-import android.support.v4.app.JobIntentService;
+import androidx.core.app.JobIntentService;
 
 /**
  * The base class for Titanium Job Intent services. To learn more about JobIntentServices, see the

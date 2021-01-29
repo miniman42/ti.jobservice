@@ -14,7 +14,7 @@ import org.appcelerator.titanium.proxy.IntentProxy;
 import android.content.Intent;
 import java.lang.reflect.Method;
 
-import android.support.v4.app.JobIntentService;
+import androidx.core.app.JobIntentService;
 
 @Kroll.proxy
 
